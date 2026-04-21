@@ -211,12 +211,12 @@ integer(byte) :: xmonth,xday
         !...pull out points in subdomain
         do i=1, subcount
            !this bit below checks for NaNs in the driver files
-           if (lspr(subset(i)) .ne. lspr(subset(i))) then
-               lspr(subset(i)) = rzero
-           endif
-           if (cupr(subset(i)) .ne. cupr(subset(i))) then
-               cupr(subset(i)) = rzero
-           endif
+           !if (lspr(subset(i)) .ne. lspr(subset(i))) then
+           !    lspr(subset(i)) = rzero
+           !endif
+           !if (cupr(subset(i)) .ne. cupr(subset(i))) then
+           !    cupr(subset(i)) = rzero
+           !endif
 
            sib%g(i)%gprogt%ps2 = ps(subset(i))
            sib%g(i)%gprogt%tm2 = tm(subset(i))

@@ -197,18 +197,18 @@ real(r8) :: facswdwn   ! scaling factor based on cosz
     ! interpolate driver large scale precipitation
     !gprogt%lspr =  facsibdrv*gprogt%lspr1 + (1.-facsibdrv) * gprogt%lspr2
     gprogt%lspr = gprogt%lspr1             !(mm/s)
-    if (gprogt%lspr .ne. gprogt%lspr) then
-        gprogt%lspr = rzero
-    endif
+    !if (gprogt%lspr .ne. gprogt%lspr) then
+    !    gprogt%lspr = rzero
+    !endif
     !print*,'gprogt%lspr: ',gprogt%lspr
     gprogt%lsprt = gprogt%lspr * 0.001     !(m/s)
 
     ! interpolate driver cumulus or convective precipitation
     !gprogt%cupr =  facsibdrv*gprogt%cupr1 + (1.-facsibdrv) * gprogt%cupr2
     gprogt%cupr = gprogt%cupr1           !(mm/s)
-    if (gprogt%cupr .ne. gprogt%cupr) then
-        gprogt%cupr = rzero
-    endif
+    !if (gprogt%cupr .ne. gprogt%cupr) then
+    !    gprogt%cupr = rzero
+    !endif
     !print*,'gprogt%cupr :',gprogt%cupr
     gprogt%cuprt = gprogt%cupr * 0.001   !(m/s)
 
